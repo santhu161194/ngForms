@@ -1,0 +1,11 @@
+<label for="employeeId">EmployeeID</label>
+<input [(ngModel)]="empId" name="employeeId"  >
+<button class="success" type="button" (click)="getEmpl(empId)">get {{empId}}</button>
+<div *ngIf="show">
+  <br>Employee ID
+  {{employee.employeeId}}
+  <br><label >FirstName</label>
+  {{employee.firstName}}
+  <br><label >LastName</label>
+  {{employee.lastName}}
+</div>

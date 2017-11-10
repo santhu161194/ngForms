@@ -3,22 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }  from './app.component';
-import { HeroFormComponent } from './hero-form/hero-form.component';
-import { ConnectionComponent } from './connection/connection.component';
+import { PromiseComponent } from './connection/connection.component';
 import { HttpClientModule } from "@angular/common/http";
+import { HttpModule } from "@angular/http";
 import { ConnectionService } from './connection.service';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { AuthenticateService } from './authenticate.service';
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
   declarations: [
     AppComponent,
-    HeroFormComponent,
-    ConnectionComponent
+    PromiseComponent,
+    EmployeeDetailsComponent,
+    AuthenticateComponent
   ],
-  providers:[ConnectionService],
+  providers:[ConnectionService,AuthenticateService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

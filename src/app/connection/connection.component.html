@@ -1,3 +1,15 @@
-<p>
-  connection works!
-</p>
+<h3>Book Details with Promise</h3>
+<ul>
+  <li *ngFor="let book of promiseBooks | async" >
+    Id: {{book.employeeId}}, Name: {{book.firstName}}
+  </li>
+</ul>
+
+<h3>Book Details after "then" to Promise </h3>
+<ul>
+  <li *ngFor="let book of books" >
+    Id: {{book.employeeId}}, Name: {{book.firstName}}
+  </li>
+</ul>
+
+<div *ngIf="errorMessage"> {{errorMessage}} </div> 

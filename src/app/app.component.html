@@ -3,6 +3,10 @@
   <h1>
     Welcome to !
     </h1>
- <app-connection></app-connection>
-
+    <app-authenticate></app-authenticate>
+    <app-employee-details></app-employee-details>
+    <button class="success" type="button" (click)="toggleDiv()">get All</button>
+    <div *ngIf="showAll"> 
+      <app-promise></app-promise>
+      
 

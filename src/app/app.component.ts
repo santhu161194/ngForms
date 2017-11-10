@@ -7,5 +7,9 @@ import { ConnectionService } from './connection.service';
 })
 export class AppComponent {
   constructor(connectionService:ConnectionService){}
-  
+  showAll:boolean=false;
+  toggleDiv()
+  {
+    this.showAll=!this.showAll;
+  }
  }
